@@ -18,9 +18,11 @@ Lastly, homeworks will be submitted via gradescope: https://www.gradescope.com/c
 
 ## Lectures (login with UW netid)
 
-1. `Lecture 01, IVPs`
+1. `Lecture 01, IVPs` [video](https://uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=4fb33a31-745f-4899-9086-acf8000a08fd) [notes](https://drive.google.com/file/d/14Ho6iEnkWzIEtOnlZQVvjbMuwVVuqP2Y/view?usp=sharing)
 
 
 ## Special Topics (login with UW netid)
 
 These are optional additional lectures going into certain topics to a deeper level.
+
+1. `Functions of matrices` [video](https://uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=c85c2f83-90a6-4220-bcbb-acf7017627cf) [notes](https://drive.google.com/file/d/1qTbgft-jEanOGP019TV96yvk9CqrDPjk/view?usp=sharing)
