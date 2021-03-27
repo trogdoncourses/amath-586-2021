@@ -25,4 +25,4 @@ Lastly, homeworks will be submitted via gradescope: https://www.gradescope.com/c
 
 These are optional additional lectures going into certain topics to a deeper level.
 
-1. `Functions of matrices` [video](https://uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=c85c2f83-90a6-4220-bcbb-acf7017627cf) [notes](https://drive.google.com/file/d/1qTbgft-jEanOGP019TV96yvk9CqrDPjk/view?usp=sharing)  The expression for the matrix exponential that I gave in the special topics lecture was incorrect, I forgot the powers!  Please check the handwritten notes for the update.
+1. `Functions of matrices` [video](https://uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=c85c2f83-90a6-4220-bcbb-acf7017627cf) [notes](https://drive.google.com/file/d/1qTbgft-jEanOGP019TV96yvk9CqrDPjk/view?usp=sharing)  The expression for the matrix exponential that I give in the video is incorrect, I forgot the powers!  Please check the handwritten notes for the update.
