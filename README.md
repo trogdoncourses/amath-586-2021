@@ -14,7 +14,7 @@ Lastly, homeworks will be submitted via gradescope: https://www.gradescope.com/c
 
 ## Homework
 
-0. [Homework 1](https://classroom.github.com/a/TAuUKQxV) 
+1. [Homework 1](https://classroom.github.com/a/TAuUKQxV) 
 
 ## Lectures (login with UW netid)
 
