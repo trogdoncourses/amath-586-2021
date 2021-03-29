@@ -8,7 +8,7 @@ For assignment discussion and submission we will use:
 
 Accompanying each assignment is a link for you to initialize a repository.  The code you write for the assignment should be put there.  It allows you to ask specific questions about specific lines of code and allows me to comment directly on your code.  Also, it's good to get used to `git`. 
 
-You can sign up for the discussion board here: piazza.com/washington/spring2021/amath586 using code `time_dep`.
+You can sign up for the discussion board here: https://piazza.com/washington/spring2021/amath586 using code `time_dep`.
 
 Lastly, homeworks will be submitted via gradescope: https://www.gradescope.com/courses/257911
 
