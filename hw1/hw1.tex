@@ -1,0 +1,138 @@
+\documentclass[10pt]{amsart}
+\usepackage[margin=1.5in]{geometry}
+\usepackage{amssymb,amsmath,enumitem}
+
+\DeclareMathOperator{\D}{d}
+\DeclareMathOperator{\E}{e}
+
+\begin{document}
+
+%\topmargin -1.0in
+%\textheight 10.5in
+\pagestyle{empty}
+
+\newcommand{\mline}{\vspace{.2in}\hrule\vspace{.2in}}
+
+
+\title{\bf { AMATH 586 Spring 2021 \\ Homework 1 ---
+Due April 7 on Gradescope by 11pm} }
+\maketitle
+\centerline{Be sure to do a {\tt git pull} to update your local version of the {\tt amath-586-2020} repository.}
+
+\mline
+\begin{enumerate}[label={\bf Problem~{\arabic*}:}]
+  \item Using the Taylor series representation of the matrix exponential:
+  \begin{enumerate}
+\item Verify the identities
+  \begin{align*}
+    \frac{\D}{\D t} \E^{t A} = A \E^{t A} = \E^{t A} A
+  \end{align*}
+  for an $n\times n$ matrix $A$.
+\item Verify that $u(t) = \E^{t A} \eta$ is indeed the solution of the IVP
+  \begin{align*}
+    \begin{cases}
+      u'(t) = A u(t),\\
+      u(0) = \eta.
+    \end{cases}
+  \end{align*}
+\end{enumerate}
+\mline
+\item Construct a system (i.e., needs to be not scalar valued)
+  \begin{align*}
+    \begin{cases}
+      u'(t) = f(u(t)),
+    \end{cases}
+  \end{align*}
+  and two choices of initial data $u_0 \neq v_0$ so that two solutions
+  \begin{align*}
+    \begin{cases}
+      u'(t) = f(u(t)),\\
+      u(0) = u_0,
+    \end{cases}
+    \begin{cases}
+      v'(t) = f(v(t)),\\
+      v(0) = v_0,
+    \end{cases}
+  \end{align*}
+  satisfy
+  \begin{align}\label{1}
+    \|u(t) - v(t)\|_2 = \|u(0) - v(0)\|_2 \E^{L t}
+  \end{align}
+  where $L$ a Lipschitz constant for $f(u)$.  Recall that we have shown that for any solution
+  \begin{align*}
+    \|u(t) - v(t)\|_2 \leq \|u(0) - v(0)\|_2 \E^{L t}.
+  \end{align*}
+  So, you are tasked with showing that this is sharp.  Then show that equality \eqref{1} fails to hold for $u'(t) = - f(u(t)),v'(t) = - f(v(t))$ with the same intial conditions.
+  \mline
+  \item Consider the IVP
+\begin{align*}
+\begin{cases}
+u_1'(t) = 2u_1(t),\\
+u_2'(t) = 3u_1(t) - u_2(t),
+\end{cases}
+\end{align*}
+with initial conditions specified at time $t=0$.  Solve this problem in two
+different ways:
+
+\begin{enumerate}
+\item Solve the first equation, which only involves $u_1$, and then insert
+this function into the second equation to obtain a nonhomogeneous linear
+equation for $u_2$.  Solve this using (5.8).  
+Check that your solution satisfies the initial conditions and the ODE.
+
+\item Write the system as $u' = Au$ and compute the matrix exponential using
+(D.30) to obtain the solution.
+\end{enumerate}
+
+\mline
+
+\item Consider the IVP
+\begin{equation*}
+\begin{cases}
+u_1'(t) = 2u_1(t),\\
+u_2'(t) = 3u_1 + 2u_2(t),
+\end{cases}
+\end{equation*}
+with initial conditions specified at time $t=0$.  Solve this problem.
+\mline
+
+\item Consider the Lotka--Volterra system\footnote{This is a famous model of predator-prey dynamics.}
+  \begin{align*}
+    \begin{cases}
+      u_1'(t) = \alpha u_1(t) - \beta u_1(t) u_2(t),\\
+      u_2'(t) = \delta u_1(t) u_2(t) - \gamma u_2(t).
+      \end{cases}
+    \end{align*}
+    For $\alpha = \delta = \gamma = \beta = 1$ and $u_1(0) = 5, u_2(0) = 0.8$ use the forward Euler method to approximate the solution with $k = 0.001$ for $t = 0,0.001,\ldots,50$.  Plot your approximate solution as a curve in the $(u_1,u_2)$-plane and plot your approximations of $u_1(t)$ and $u_2(t)$ on the same axes as a function of $t$.  Repeat this with backward Euler.  What do you notice about the behavior of the numerical solutions?  The most obvious feature is most apparent in the $(u_1,u_2)$-plane.
+
+    \mline
+
+    \item Determine the coefficients $\beta_0,~\beta_1,~\beta_2$ for the third
+order, 2-step Adams-Moulton method.  Do this in two different ways:
+\begin{enumerate} 
+ \item Using the expression for the local truncation error in Section 5.9.1,
+ \item Using the relation
+ \[
+ u(t_{n+2}) = u(t_{n+1}) + \int_{t_{n+1}}^{t_{n+2}}\,f(u(s))\,ds.
+ \]
+ Interpolate  a quadratic polynomial $p(t)$ through the three values
+ $f(U^n),~f(U^{n+1})$ and $f(U^{n+2})$ and then integrate this polynomial
+ exactly to obtain the formula.  The coefficients of the polynomial will
+ depend on the three values $f(U^{n+j})$.   It's easiest to use the
+ ``Newton form'' of the interpolating polynomial and consider the three
+times $t_n=-k$, $t_{n+1}=0$, and $t_{n+2}=k$ so that $p(t)$ has the form
+\[
+p(t) = A + B(t+k) + C(t+k)t
+\]
+where $A,~B$, and $C$ are the appropriate divided differences based on the
+data.  Then integrate from $0$ to $k$.   (The method has the same
+coefficients at any time, so this is valid.)
+\end{enumerate}
+  \end{enumerate}
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
