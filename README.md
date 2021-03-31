@@ -19,7 +19,7 @@ Lastly, homeworks will be submitted via gradescope: https://www.gradescope.com/c
 ## Lectures (login with UW netid)
 
 1. `Lecture 01, IVPs` [video](https://uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=4fb33a31-745f-4899-9086-acf8000a08fd) [notes](https://drive.google.com/file/d/14Ho6iEnkWzIEtOnlZQVvjbMuwVVuqP2Y/view?usp=sharing)
-2. `Lecture 01, more on IVPs, forward Euler` [notes](https://drive.google.com/file/d/1kfhEFQOOdpF-q4SdnLWeeGMG2b1ub-qm/view?usp=sharing)
+2. `Lecture 01, more on IVPs, forward Euler` [video](https://washington.zoom.us/rec/play/Gi8KO5PZEQUG25Eho78_3My89kWZ8n8qM_B8eWzONzZytcUkqJ7yaq8DOfKipyjZwLomFFw6_4X9aJEo.4EM78LaPsAd40UE9) [notes](https://drive.google.com/file/d/1kfhEFQOOdpF-q4SdnLWeeGMG2b1ub-qm/view?usp=sharing)
 
 ## Special Topics (login with UW netid)
 
