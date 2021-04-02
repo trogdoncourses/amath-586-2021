@@ -20,7 +20,8 @@ Lastly, homeworks will be submitted via gradescope: https://www.gradescope.com/c
 
 1. `Lecture 01, IVPs` [video](https://uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=4fb33a31-745f-4899-9086-acf8000a08fd) [notes](https://drive.google.com/file/d/14Ho6iEnkWzIEtOnlZQVvjbMuwVVuqP2Y/view?usp=sharing)
 2. `Lecture 02, more on IVPs, forward Euler` [video](https://washington.zoom.us/rec/play/Gi8KO5PZEQUG25Eho78_3My89kWZ8n8qM_B8eWzONzZytcUkqJ7yaq8DOfKipyjZwLomFFw6_4X9aJEo.4EM78LaPsAd40UE9) [notes](https://drive.google.com/file/d/1kfhEFQOOdpF-q4SdnLWeeGMG2b1ub-qm/view?usp=sharing)
-3. `Lecture 03, backward Euler, Euler demo, truncation errors` [notes](https://drive.google.com/file/d/1UQEwAvs5YzSlwz318QmlQ-Y-ogMX64wk/view?usp=sharing) [video]() [ipynb](https://nbviewer.jupyter.org/github/trogdoncourses/amath-586-2021/blob/main/notebooks/Euler.ipynb) [html](https://faculty.washington.edu/trogdon/amath-586-2021/notebooks/Euler.html)
+3. `Lecture 03, backward Euler, Euler demo, truncation errors` [notes](https://drive.google.com/file/d/1UQEwAvs5YzSlwz318QmlQ-Y-ogMX64wk/view?usp=sharing) [video](https://washington.zoom.us/rec/share/NKC6XLgC27Hdm0OgDtnFoE4TSVdoyqHa6nffO88hMWIGaFuf10IJB0Ob3qMUNoDu.yjrOaa72jjMhZFia
+) [ipynb](https://nbviewer.jupyter.org/github/trogdoncourses/amath-586-2021/blob/main/notebooks/Euler.ipynb) [html](https://faculty.washington.edu/trogdon/amath-586-2021/notebooks/Euler.html)
 
 ## Special Topics (login with UW netid)
 
