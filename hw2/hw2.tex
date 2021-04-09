@@ -1,0 +1,172 @@
+\documentclass[10pt]{amsart}
+\usepackage[margin=1.5in]{geometry}
+\usepackage{amssymb,amsmath,enumitem}
+
+\DeclareMathOperator{\D}{d}
+\DeclareMathOperator{\E}{e}
+\newcommand{\half}{\frac{1}{2}}
+\newcommand\unp{U^{n+1}}
+\newcommand\unm{U^{n-1}}
+\newcommand{\bigo}{{\mathrm O}}
+
+\begin{document}
+
+%\topmargin -1.0in
+%\textheight 10.5in
+\pagestyle{empty}
+
+\newcommand{\mline}{\vspace{.2in}\hrule\vspace{.2in}}
+
+
+\title{\bf { AMATH 586 Spring 2021 \\ Homework 2 ---
+Due April 23 on GitHub by 11pm} }
+\maketitle
+\centerline{Be sure to do a {\tt git pull} to update your local version of the {\tt amath-586-2021} repository.}
+
+\mline
+\begin{enumerate}[label={\bf Problem~{\arabic*}:}]
+  \item Consider
+
+$$ v'''(t) + v'(t) v(t) - \frac{\beta_1 + \beta_2 + \beta_3}{3} v'(t) =0, $$
+
+where $\beta_1 < \beta_2 < \beta_3$.  It follows that
+$$
+v(t) = \beta_2 + (\beta_3 - \beta_2) \mathrm{cn}^2\left( \sqrt{ \frac{\beta_3 - \beta_1}{12}} t, \sqrt{\frac{\beta_3 - \beta_2}{\beta_3 - \beta_1}} \right)
+$$
+is a solution where $\mathrm{cn}(x,k)$ is the Jacobi cosine function and $k$ is the elliptic modulus.  Some notations use $\mathrm{cn}(x,m)$ where $m = k^2$.  The corresponding initial conditions are
+$$
+v(0) = \beta_3, \\
+v'(0) = 0,\\
+v''(0) = -\frac{(\beta_3 - \beta_1)(\beta_3-\beta_2)}{6}.$$
+Derive a third-order Runge-Kutta method and verify the order of accuracy on this problem using the methodology in Lecture 6 \& 7 --- produce a plot and and a table.
+\mline
+\item  Which of the following Linear Multistep Methods are convergent?  For 
+the ones that are not, are they inconsistent, or not zero-stable, or both?
+ \begin{enumerate}
+ \item $U^{n+3} = U^{n+1} + 2kf(U^n)$,
+ \item $U^{n+2} = \half U^{n+1} + \half U^{n} + 2kf(U^{n+1})$,
+ \item $\unp = U^n$, 
+ \item $U^{n+4} = U^{n} + \frac 4 3 k(f(U^{n+3})+f(U^{n+2})+f(U^{n+1}))$,
+ \item $U^{n+3} = -U^{n+2} + U^{n+1} +U^{n}+2k(f(U^{n+2})+f(U^{n+1}))$.
+ \end{enumerate}
+
+ \mline
+ \item For the one-step method (6.17), with $\Psi$ given in (6.18), show that the Lipschitz constant is $L' = L + \frac{k}{2} L^2$ where $L$ is the Lipschitz constant for $f$.
+
+
+% uncomment the next two lines if you want to insert solution...
+%\vskip 1cm
+%{\bf Solution:}
+
+% insert your solution here!
+
+\mline 
+\item  The Fibonacci numbers
+
+\begin{enumerate}
+\item Determine the general solution to the linear difference equation
+$U^{n+2} = U^{n+1} + U^n$.
+
+\item Determine the solution to this difference equation with the starting
+values $U^0=1$, $U^1=1$.  Use this to determine $U^{30}$.
+(Note, these are the {\em Fibonacci numbers}, which of course should all be
+integers.)
+
+\item Show that for large $n$ the ratio of successive Fibonacci numbers
+$U^n/U^{n-1}$ approaches the ``golden ratio'' $\phi \approx 1.618034$.
+\end{enumerate}
+
+
+\mline
+\item Explicit solution of leapfrog:  Consider the difference equation
+  \begin{align*}
+    U^{n+1} &+ U^{n-1} = 2\lambda U^n, \quad n \geq 0,\\
+    U^0 &= 1, \quad U^{-1} = 0.
+  \end{align*}
+  Provided that $-1 \leq \lambda \leq 1$ perform the following steps:
+
+\begin{enumerate}
+\item Argue that this can be replaced with
+   \begin{align*}
+    U^{n+1} &+ U^{n-1} = (e^{i \theta} + e^{- i \theta}) U^n, \quad n \geq 0,\\
+    U^0 &= 1, \quad U^{-1} = 0, \quad \theta \in \mathbb R.
+   \end{align*}
+ \item Define $V^n = U^n - e^{i \theta} U^{n-1}$ and find a simpler recurrence relation for $V^n$.  Solve it.
+ \item With $V^n$ known, $V^n = U^n - e^{i \theta} U^{n-1}$ gives an inhomogeneous recurrence relation for $U^n$.  Find a formula for $U^n$. For which value(s) of $\lambda \in [-1,1]$ is $U^n$ largest?
+\end{enumerate} 
+
+% uncomment the next two lines if you want to insert solution...
+%\vskip 1cm
+%{\bf Solution:}
+
+% insert your solution here!
+
+%--------------------------------------------------------------------------
+\mline
+\item 
+Any $r$-stage Runge-Kutta method applied to $u'=\lambda u$ will give an
+expression of the form
+\[
+U^{n+1} = R(z)U^n
+\]
+where $z=\lambda k$ and $R(z)$ is a rational function, a ratio of
+polynomials in $z$ each having degree at most $r$.  For an explicit method
+$R(z)$ will simply be a polynomial of degree $r$ and for an implicit method
+it will be a more general rational function.
+
+Since $u(t_{n+1}) = e^z u(t_n)$ for this problem, we expect that a $p$th
+order accurate method will give a function $R(z)$ satisfying
+\[
+\qquad  R(z) = e^z + \bigo(z^{p+1}) \quad\text{as}~z \to 0.
+\]
+This indicates that the one-step error is $\bigo(z^{p+1})$ on this problem,
+as expected for a $p$th order accurate method.
+
+The explicit
+Runge-Kutta method of Example 5.13 is fourth order accurate in general,
+so in particular it should exhibit this accuracy when applied to 
+$u'(t) = \lambda u(t)$.  Show that in fact when applied to this
+problem the method becomes $U^{n+1} = R(z)U^n$ where $R(z)$ is 
+a polynomial of degree 4, and that this polynomial agrees with the Taylor
+expansion of $e^z$ through $O(z^4)$ terms.
+
+We will see that this function $R(z)$ is also important in the study of 
+absolute stability of a one-step method.
+
+% uncomment the next two lines if you want to insert solution...
+%\vskip 1cm
+%{\bf Solution:}
+
+% insert your solution here!
+
+%--------------------------------------------------------------------------
+
+\mline
+\item
+
+Determine the function $R(z)$ described in the previous exercise for the
+TR-BDF2 method given in (5.37).  Note that this can be simplified to the
+form (8.6), which is given only for the autonomous case but that suffices
+for $u'(t) = \lambda u(t)$.  (You might want to convince yourself these are 
+the same method).
+
+Confirm that $R(z)$ agrees with $e^z$ to the expected order.
+
+Note that for this implicit method $R(z)$ will be a rational function, so you
+will have to expand the denominator in a Taylor series, or use the Neumann
+series 
+\[
+1/(1-\epsilon) = 1 + \epsilon + \epsilon^2 + \epsilon^3 + \cdots.
+\]
+
+
+
+  
+  \end{enumerate}
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
