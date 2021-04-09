@@ -80,10 +80,10 @@ $U^n/U^{n-1}$ approaches the ``golden ratio'' $\phi \approx 1.618034$.
 \mline
 \item Explicit solution of leapfrog:  Consider the difference equation
   \begin{align*}
-    U^{n+1} &+ U^{n-1} = 2\lambda U^n, \quad n \geq 0,\\
+    U^{n+1} &+ U^{n-1} = 2x U^n, \quad n \geq 0,\\
     U^0 &= 1, \quad U^{-1} = 0.
   \end{align*}
-  Provided that $-1 \leq \lambda \leq 1$ perform the following steps:
+  Provided that $-1 \leq x \leq 1$ perform the following steps:
 
 \begin{enumerate}
 \item Argue that this can be replaced with
@@ -92,9 +92,10 @@ $U^n/U^{n-1}$ approaches the ``golden ratio'' $\phi \approx 1.618034$.
     U^0 &= 1, \quad U^{-1} = 0, \quad \theta \in \mathbb R.
    \end{align*}
  \item Define $V^n = U^n - e^{i \theta} U^{n-1}$ and find a simpler recurrence relation for $V^n$.  Solve it.
- \item With $V^n$ known, $V^n = U^n - e^{i \theta} U^{n-1}$ gives an inhomogeneous recurrence relation for $U^n$.  Find a formula for $U^n$. For which value(s) of $\lambda \in [-1,1]$ is $U^n$ largest?
+ \item With $V^n$ known, $V^n = U^n - e^{i \theta} U^{n-1}$ gives an inhomogeneous recurrence relation for $U^n$.  Find a formula for $U^n$. For which value(s) of $x \in [-1,1]$ is $U^n$ largest?
 \end{enumerate} 
 
+Note: In this problem you can make the ansatz $U^n = \lambda^n$ and find a quadratic equation to determine two possible values for $\lambda$, say, $\lambda_1,\lambda_2$. Then the general solution is a sum of these, $U^n = c_1 \lambda_1^n + c_2 \lambda_2^n$.  This approach will give another representation of the same solution. You are encouraged to do so and derive this remarkable identity!
 % uncomment the next two lines if you want to insert solution...
 %\vskip 1cm
 %{\bf Solution:}
