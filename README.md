@@ -26,6 +26,7 @@ Lastly, homeworks will be submitted via gradescope: https://www.gradescope.com/c
 4. `Lecture 04, trapezoid, multistage and multistep methods` [notes](https://drive.google.com/file/d/15RkHGwJ4tmHGFrwvmeueTfAZUd3Z1js7/view?usp=sharing) [video](https://washington.zoom.us/rec/share/tCN58UBCyunK4Dku6oC79tgcwppNXQQkQ6fUxFROdsIP1ZAYJzqSItBECiwQww-o.ZYNabviFaXlkWNut)
 5. `Lecture 05, multistage, RK and LMMs` [video](https://washington.zoom.us/rec/share/zOf0Wfg2hz4KkyqsR9gXT412qKxuottgulUZZ6suOqnximWv_Cu0BkPA0yHzhM1B.tBTIzsWnERTr_SVj) [notes](https://drive.google.com/file/d/1XW6X9DuXa3SF0_UPh8PmkdyXphfwKzT3/view?usp=sharing)
 6. `Lecture 06, error analysis for LMMs, and demo` [video](https://washington.zoom.us/rec/share/9uq5V-ZByfrChIQwMT-eV8Rmey2tUPkeKE6YHTBysMnkBcMmIMS1AfHb1aqd7mIo.067ulLPxtb_sIwqA) [notes](https://drive.google.com/file/d/1eJ7xNag6lNJbMxsVV82RPAI35vDe2tcj/view?usp=sharing) [ipynb](https://nbviewer.jupyter.org/github/trogdoncourses/amath-586-2021/blob/main/notebooks/Multistage-step.ipynb) [html](https://faculty.washington.edu/trogdon/amath-586-2021/notebooks/Multistage-step.html)
+7. `Lecture 07, convergence on one-step method` [video](https://drive.google.com/file/d/1dtv1jqj1O51H0o1u1dxAB8kkJNl86kX5/view?usp=sharing) [notes](https://drive.google.com/file/d/1dtv1jqj1O51H0o1u1dxAB8kkJNl86kX5/view?usp=sharing)
 
 ## Special Topics (login with UW netid)
 
