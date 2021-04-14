@@ -27,6 +27,7 @@ Lastly, homeworks will be submitted via gradescope: https://www.gradescope.com/c
 5. `Lecture 05, multistage, RK and LMMs` [video](https://washington.zoom.us/rec/share/zOf0Wfg2hz4KkyqsR9gXT412qKxuottgulUZZ6suOqnximWv_Cu0BkPA0yHzhM1B.tBTIzsWnERTr_SVj) [notes](https://drive.google.com/file/d/1XW6X9DuXa3SF0_UPh8PmkdyXphfwKzT3/view?usp=sharing)
 6. `Lecture 06, error analysis for LMMs, and demo` [video](https://washington.zoom.us/rec/share/9uq5V-ZByfrChIQwMT-eV8Rmey2tUPkeKE6YHTBysMnkBcMmIMS1AfHb1aqd7mIo.067ulLPxtb_sIwqA) [notes](https://drive.google.com/file/d/1eJ7xNag6lNJbMxsVV82RPAI35vDe2tcj/view?usp=sharing) [ipynb](https://nbviewer.jupyter.org/github/trogdoncourses/amath-586-2021/blob/main/notebooks/Multistage-step.ipynb) [html](https://faculty.washington.edu/trogdon/amath-586-2021/notebooks/Multistage-step.html)
 7. `Lecture 07, convergence of one-step method` [video](https://washington.zoom.us/rec/share/3j4JQZpi0WpiJS5Do8cmmetgw7kxOfzqbI6lf4mHNF8LGpUCRE9D2M8J2lgWFAUu.xEnwttEAwZkaKGV_) [notes](https://drive.google.com/file/d/1dtv1jqj1O51H0o1u1dxAB8kkJNl86kX5/view?usp=sharing)
+8. `Lecture 08, zero-stability` [video](https://washington.zoom.us/rec/share/P043gxphJxnbUTY1YPY5LXgds4K2KN7gzgXHChkwCXo2f_PYmppEK5PrHLxttB8I.FZ2dy8YtoW3-hmT8) [notes](https://drive.google.com/file/d/1_5ldT1w6pFm1yr_p9W2pxMu9FbH3OAwC/view?usp=sharing)
 
 ## Special Topics (login with UW netid)
 
