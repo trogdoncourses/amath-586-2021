@@ -36,3 +36,4 @@ These are optional additional lectures going into certain topics to a deeper lev
 
 1. `Functions of matrices` [video](https://uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=c85c2f83-90a6-4220-bcbb-acf7017627cf) [notes](https://drive.google.com/file/d/1qTbgft-jEanOGP019TV96yvk9CqrDPjk/view?usp=sharing)  The expression for the matrix exponential that I give in the video is incorrect, I forgot the powers!  Please check the handwritten notes for the update.
 2. `Runge-Kutta error analysis` [video](https://uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=4a22d0b4-ea39-44ac-9986-ad030172d757) [notes](https://drive.google.com/file/d/1-RQlKcvy2Qsik-EyRTPiLb_1GYohB-Ge/view?usp=sharing)
+3. `Dahlquist's Theorem` [video](https://uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=678d3451-4cb6-4cad-93b7-ad0f011a419f) [notes](https://drive.google.com/file/d/1HQqk8b4nP1QnYxZMHsgKDRxMUkHCM2TK/view?usp=sharing)
