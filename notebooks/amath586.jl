@@ -102,8 +102,9 @@ function run_newton(g,Dg,u₀,tol,max_iter)
     Unew = u₀
     Uold = u₀
     for j = 1:max_iter
-        Unew = Uold - (Dg(Uold)\g(Uold))
-        if maximum(abs.(Unew-Uold)) < tol 
+        step = (Dg(Uold)\g(Uold))
+        Unew = Uold - step
+        if maximum(abs.(step)) < tol 
             return Unew
         end
         Uold = Unew
