@@ -1,0 +1,160 @@
+\documentclass[10pt]{amsart}
+\usepackage[margin=1.5in]{geometry}
+\usepackage{amssymb,amsmath,enumitem}
+
+\DeclareMathOperator{\D}{d}
+\DeclareMathOperator{\E}{e}
+\newcommand{\half}{\frac{1}{2}}
+\newcommand\unp{U^{n+1}}
+\newcommand\unm{U^{n-1}}
+\newcommand{\bigo}{{\mathrm O}}
+\newcommand{\reals}{\mathbb R}
+
+
+
+\begin{document}
+
+%\topmargin -1.0in
+%\textheight 10.5in
+\pagestyle{empty}
+
+\newcommand{\mline}{\vspace{.2in}\hrule\vspace{.2in}}
+
+
+\title{\bf { AMATH 586 Spring 2021 \\ Homework 3 ---
+Due May 7 on GitHub by 11pm} }
+\maketitle
+\centerline{Be sure to do a {\tt git pull} to update your local version of the {\tt amath-586-2021} repository.}
+
+\mline
+\begin{enumerate}[label={\bf Problem~{\arabic*}:}]
+\item It is natural to ask if a neighborhood of $z = 0$ can be in the absolute stability region $S$ for a LMM.  You will show that this cannot be the case.  Consider a consistent and zero-stable LMM
+  \begin{align*}
+    \sum_{j=0}^r \alpha_j U^{n+j} = k \sum_{j=0}^r \beta_j f(U^{n+j}).
+  \end{align*}
+  Recall the characteristic polynomial $\pi(\xi;z) = \rho(\xi) - z \sigma(\xi)$. Show:
+  \begin{itemize}
+  \item Consistency implies that $\pi(1;0) = 0$.
+  \item Stability implies that $\rho'(1) \neq 0$.
+  \item Suppose $\xi = 1 + \eta(z)$ for $z$ near zero so that $\pi(\xi;z) = \pi(1 + \eta(z);z) = 0$.  Compute $\eta'(0)$.  Why does this imply that there must be an interval $(0,\epsilon]$ for some small $\epsilon > 0$ that does not lie in the absolute stability region $S$.  
+  \end{itemize}
+
+  \mline
+  
+  \item Recall the test problem
+
+$$ v'''(t) + v'(t) v(t) - \frac{\beta_1 + \beta_2 + \beta_3}{3} v'(t) =0, $$
+
+where $\beta_1 < \beta_2 < \beta_3$.  It follows that
+$$
+v(t) = \beta_2 + (\beta_3 - \beta_2) \mathrm{cn}^2\left( \sqrt{ \frac{\beta_3 - \beta_1}{12}} t, \sqrt{\frac{\beta_3 - \beta_2}{\beta_3 - \beta_1}} \right)
+$$
+is a solution where $\mathrm{cn}(x,k)$ is the Jacobi cosine function and $k$ is the elliptic modulus.  Some notations use $\mathrm{cn}(x,m)$ where $m = k^2$.  The corresponding initial conditions are
+$$
+v(0) = \beta_3, \\
+v'(0) = 0,\\
+v''(0) = -\frac{(\beta_3 - \beta_1)(\beta_3-\beta_2)}{6}.$$  Write the equation as a system and compute the Jacobian as a function of $t$.  For $\beta_1 = -1, \beta_2 = 1, \beta_3 = 2$, based on an analysis of the Jacobian, suggest methods to solve the problem. Repeat for $\beta_1 = 0, \beta_2 = 1, \beta_3 = 10$.\\
+
+\noindent
+Note:  It will help to plot each eigenvalue of the Jacobian as a function of $t$.  If you sort the eigenvalues by their imaginary parts, things are bit clearer.
+
+\mline
+
+\item
+  \begin{itemize}
+    \item Plot the absolute stability region for the TR-BDF2 method (8.6).
+  
+
+    \item By analyzing $R(z)$, show 
+that the method is both A-stable and L-stable.
+Hint: To show A-stability, show that $|R(z)| \leq 1$ on the imaginary axis
+and explain why this is enough.
+\end{itemize}
+
+\mline
+
+\item Let $g(x)=0$ represent a system of $s$ nonlinear equations in $s$ unknowns,
+so $x\in\reals^s$ and $g: \reals^s \to \reals^s$.  A vector $\bar
+x\in\reals^s$ is a {\em fixed point} of $g(x)$ if 
+\begin{equation}\label{a}
+\bar x = g(\bar x).
+\end{equation}
+One way to attempt to compute $\bar x$ is with {\em fixed point iteration}:
+from some starting guess $x^0$, compute
+\begin{equation}\label{b}
+x^{j+1} = g(x^j)
+\end{equation}
+for $j=0,~1,~\ldots$.
+
+\begin{enumerate}
+\item Show that if there exists a norm $\|\cdot\|$ such that $g(x)$ is
+Lipschitz continuous with constant $L<1$ in a neighborhood of $\bar x$, then
+fixed point iteration converges from any starting value in this
+neighborhood.
+{\bf Hint:} Subtract equation \eqref{a} from \eqref{b}.
+
+
+\item Suppose $g(x)$ is differentiable and let $D_xg(x)$ be the $s\times s$
+Jacobian matrix.  Show that if the condition of part (a) holds then
+$\rho(D_xg(\bar x)) < 1$, where $\rho(A)$ denotes the spectral radius of a
+matrix.
+
+\item Consider a predictor-corrector method (see Section 5.9.4) consisting
+of forward Euler as the predictor and backward Euler as the corrector, and
+suppose we make $N$ correction iterations, i.e., we set
+\begin{tabbing}
+xxxxxxxxx\=xxxx\=\kill\\
+\>$\hat U^0 = U^n + kf(U^n)$\\
+\>for $j = 0,~1,~\ldots,~N-1$\\
+\>\>$\hat U^{j+1} = U^n + kf(\hat U^j)$\\
+\>\>end\\
+\>$U^{n+1} = \hat U^N$.\\
+\end{tabbing}
+Note that this can be interpreted as a fixed point iteration for solving the
+nonlinear equation
+\[
+\unp = U^n + kf(\unp)
+\]
+of the backward Euler method.  Since the backward Euler method is implicit
+and has a stability region that includes the entire left half plane, as
+shown in Figure 7.1(b), one might hope that this predictor-corrector method
+also has a large stability region.
+
+Plot the stability region $S_N$ of this method for $N=2,~5,~10,~20,~50$ 
+and observe that in fact the stability region does not grow much in size.
+
+\item Using the result of part (b), show that the fixed point iteration
+being used in the predictor-corrector method of part (c) can only be
+expected to converge if $|k\lambda| < 1$ for all eigenvalues $\lambda$ of
+the
+Jacobian matrix $f'(u)$.  
+
+\item Based on the result of part (d) and the shape of the stability region
+of Backward Euler, what do you expect the stability region $S_N$ of part (c)
+to converge to as $N\to\infty$?
+
+\end{enumerate}
+\clearpage
+
+\mline
+
+\item Consider the matrix $M_r = I - r T$ where $T$ is the $m\times m$ matrix.
+  \begin{align*}
+    T = \begin{bmatrix}
+      -2 & 1 \\
+      1 & -2 & 1 \\
+      & 1 &-2 & \ddots\\
+      & &\ddots & \ddots & 1\\
+      &&& 1 & -2 \end{bmatrix}
+  \end{align*}
+  and $r \geq 0$.  Find the largest value of $c$ such that $M_r$ is invertible for all $ r \in [0,c)$.
+
+  
+  \end{enumerate}
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
