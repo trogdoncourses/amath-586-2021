@@ -36,6 +36,7 @@ Lastly, homeworks will be submitted via gradescope: https://www.gradescope.com/c
 13. `Lecture 13, more on L-stability` [video](https://washington.zoom.us/rec/share/5G-4Q6brb6VEP2RX_ZT6yow-elmabxbTiKLr7HNitg7ron3Loj_IPJlErpMfnGfe.JKU625iI9rj0mBfd) [notes](https://drive.google.com/file/d/1J1ydzXSBJyi5OEloztscYtOsBifGinkV/view?usp=sharing) [ipynb](https://nbviewer.jupyter.org/github/trogdoncourses/amath-586-2021/blob/main/notebooks/Astability.ipynb) [html](https://faculty.washington.edu/trogdon/amath-586-2021/notebooks/Astability.html)
 14. `Lecture 14, intro to heat equation` [video](https://washington.zoom.us/rec/share/adI3pRoXa50zQqDEeyjmrB8kUriI1o8ndYqBIsMzxnTH44ZZj00TL6yGFaoMU7C_.DH21AUPtprzrPQSB) [notes](https://drive.google.com/file/d/1hIapDuwTHHkYdq5m1o_7PELZsEctWs7h/view?usp=sharing)
 15. `Lecture 15, LTE for methods for the heat equation` [video](https://washington.zoom.us/rec/share/1RNgVZk3the2BzBTKXzsTnraBBlP-ESvvPl1XtMp38Nv0tiMuy_S3qJfRwFIFLD8.KAgKQKfevGLNUy9l) [notes](https://drive.google.com/file/d/1ppphDS4l0K2RDE943SYTR5p0nDiVaeqx/view?usp=sharing)
+16. `Lecture 16, stability for methods for the heat equation` [video](https://washington.zoom.us/rec/share/z5tEJu7WuZSjIIX-S3EoXIEuW8V0IeIrgwL1by5qw9VBOoNrQiy8t7F0CQhZD1ny.7Zg5iyxEPUGCU57a) [notes](https://drive.google.com/file/d/162PA_aGbKxZLX7nkYUv0F279x9JmmPej/view?usp=sharing)
 
 ## Special Topics (login with UW netid)
 
