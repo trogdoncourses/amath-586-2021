@@ -73,7 +73,9 @@ function check_condition(λ)
     return 1
 end
 
-function root_condition(α,β,z)
+function 
+
+function compute_roots(α,β,z)
     r = length(α)-1
     c = α-z*β
     if α[1]-z*β[1] ≈ 0.
@@ -81,7 +83,11 @@ function root_condition(α,β,z)
     else
         λ = find_roots(c[2:end]/c[1]) # let's suppose that first and second coefficients don't vanish simultaneously
     end
-    return check_condition(λ)
+    return λ
+end
+
+function root_condition(α,β,z)
+    return compute_roots(α,β,z) |> check_condition
 end
 
 function check_convergence(α,β) #supposing that α[1] = 1

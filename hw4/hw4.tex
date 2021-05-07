@@ -1,0 +1,204 @@
+\documentclass[10pt]{amsart}
+\usepackage[margin=1.5in]{geometry}
+\usepackage{amssymb,amsmath,enumitem}
+\usepackage{listings}
+\lstset{basicstyle=\ttfamily}
+
+\DeclareMathOperator{\D}{d}
+\DeclareMathOperator{\E}{e}
+\newcommand{\half}{\frac{1}{2}}
+\newcommand\unp{U^{n+1}}
+\newcommand\unm{U^{n-1}}
+\newcommand{\bigo}{{\mathrm O}}
+\newcommand{\reals}{\mathbb R}
+
+
+
+\begin{document}
+
+%\topmargin -1.0in
+%\textheight 10.5in
+\pagestyle{empty}
+
+\newcommand{\mline}{\vspace{.2in}\hrule\vspace{.2in}}
+
+
+\title{\bf { AMATH 586 Spring 2021 \\ Homework 4 ---
+Due May 21 by 11pm} }
+\maketitle
+\centerline{Be sure to do a {\tt git pull} to update your local version of the {\tt amath-586-2021} repository.}
+
+\mline
+\begin{enumerate}[label={\bf Problem~{\arabic*}:}]
+\item Consider solving the following heat equation with ``linked'' boundary conditions
+  \begin{align*}
+\begin{cases}
+u_t = \frac 1 2 u_{xx}\\
+u(0,t) = s u(1,t)\\
+u_x(0,t) = u_x(1,t),\\
+u(x,0) = \eta(x),
+\end{cases}
+\end{align*}
+where $s \neq -1$.   Recall that the MOL discretization with the standard second-order stencil can be written as
+\begin{align*}
+U'(t) = \frac{1}{2h^2} A U(t) + \begin{bmatrix} \frac{U_0(t)}{2h^2} \\ \vdots \\ \frac{U_{m+1}(t)}{2h^2} \end{bmatrix}, \quad A = \begin{bmatrix}
+-2  & 1\\
+1 & -2 & 1 \\
+& 1 & -2 & 1\\
+&& \ddots & \ddots & \ddots \\
+&&& 1 & -2 \end{bmatrix}.
+\end{align*}
+The first boundary condition is naturally enforced via $U_0(t) = s U_{m+1}(t)$. Show that if we suppose
+\begin{align*}
+\frac{U_{1}(t) - U_0(t)}{h} = \frac{U_{m+1}(t) - U_m(t)}{h},
+\end{align*}
+then the MOL system becomes
+\begin{align}\label{mol}
+U'(t) = \frac{1}{2h^2} B U(t), \quad B = \begin{bmatrix}
+-2 + \frac{s}{1 + s} & 1 &&&& \frac{s}{1 + s}\\
+1 & -2 & 1 \\
+& 1 & -2 & 1 & \\
+&&\ddots & \ddots & \ddots \\
+&&&1 & -2 & 1 \\
+\frac{1}{1+s} &&&& 1 & -2 + \frac{1}{1+s} \end{bmatrix}.
+\end{align}
+
+\mline
+
+%\item Let $S$ be an $m \times m$ matrix such that
+%  \begin{align*}
+%    \sum_{i=1}^m S_{ij} = 0, 
+%  \end{align*}
+%  for each $j = 1,2,\ldots,m$.  Show that if $\sum_{j=1}^m x_j = \sum_{j=1}^m y_j$ if $y = Sx$.
+%
+%  
+%\mline
+
+\item Apply the backward Euler method to \eqref{mol} to give
+  \begin{align}\label{be}
+    \left( I - \frac{k}{2h^2}B \right) U^{n+1} =  U^n, \quad U^n = \begin{bmatrix} U_1^n \\ U_2^n \\ \vdots \\U_m^n \end{bmatrix},
+  \end{align}
+  and write a routine to solve the system \eqref{mol} with initial condition
+  \begin{align*}
+    \eta(x) = e^{-20(x-1/2)^2},
+  \end{align*}
+  using $k = h$ and $h = 0.001$ with $s = 2$.  Plot the solution at times $t = 0.001,0.01,0.1$.  Note:  One could use trapezoid to solve this problem but it wouldn't preserve some important features that we care about.  See the last extra credit problem.
+
+  \mline
+  
+  \item In the next two problems you will use the heat equation to assist with a statistics problem.
+  \begin{itemize}  
+\item Consider data points $X_1,X_2,\ldots,X_N,\ldots$ each being a real number arising from a repeated experiment.  We may want to know what probability distribution (if any) they come from.  One way of coming up with an approximation to the density is to use
+  \begin{align}\label{eq:heat-evolve}
+    \frac{1}{N} \sum_{j=1}^N \frac{1}{\sqrt{2 \pi t}} \exp \left( - \frac{(x - X_j)^2}{2t} \right), \quad t > 0.
+  \end{align}
+  Use normally distributed random data ({\tt X = randn(n)} in {\tt Julia},  {\tt X = randn(n,1)} in {\tt Matlab} and {\tt X = numpy.random.randn(n,1)} in {\tt Python}) with $n = 10000$ and plot this function for $t = 0.001,0.01,0.1,1,10$ and compare it with the true  probabilty density function for the data:  $\rho(x) = \frac{1}{\sqrt{2 \pi}} e^{-x^2/2}$. Visually, which ``time'' $t$ gives the best approximation?\\
+
+  \underline{Note}:  The solution of the heat equation $u_t = \frac 1 2 u_{xx}$ with initial condition $u(x,0) = \delta(x)$ where $\delta$ is the standard Dirac delta function is given by $u(x,t) = \frac{1}{\sqrt{2 \pi t}} \exp \left( - \frac{x^2}{2t} \right)$.  So \eqref{eq:heat-evolve} can be seen as the solution of $u_t = \frac 1 2 u_{xx}$ with
+  \begin{align*}
+    u(x,0) = \frac{1}{N} \sum_{j=1}^N \delta(x-X_j).
+  \end{align*}
+
+\item The previous approach works well if the underlying distribution is smooth and decays exponentially in both directions.  But there physical situations within cell biology, in particular, where the density should only be non-zero on a finite interval $[0,1]$ and satisfy some natural boundary conditions:
+  \begin{align*}
+    \rho(0) = s \rho(1), \quad \rho'(0) = \rho'(1).
+  \end{align*}
+  An example of such a function for $s = 2$ is given by
+  \begin{align*}
+    \rho(x) = - \frac 2 3 x + \frac 4 3 + \frac 1 2 \sin(2 \pi x).
+  \end{align*}
+  Code to generate $X_1,X_2,\ldots,X_N,\ldots$ with this probability density in our three languages is given at the end of the homework.  Repeat the calculation in the prevous part with this data, $X_1,X_2,\ldots$.
+    
+\end{itemize}
+\mline
+\item Consider binning data $X_1,X_2,\ldots,X_N$, $X_j \in (0,1)$ as follows:
+  \begin{itemize}
+  \item Find $Y_i$ so that $Y_i$ is the number of data points $X_j$ that lie in the interval $[ih,(i+1)h) = [x_i,x_{i+1})$.
+  \item Set $U_i^0 = \frac{Y_i}{h N}$.
+  \end{itemize}
+  With $N = m$, $h = 0.0001$, $k = 10h$, $s = 2$, generate $X_1,\ldots,X_N$ using the {\tt prand} function, and bin the data to get the initial condition $U_i^0$, $i = 1,2,\ldots,m$ for the MOL discretization \eqref{mol}.  Solve with this initial condition using your code from {\textbf{Problem 2}} to times $t = 0.001,0.01,0.1$.  Compare with Part 2 of Problem 3.
+
+\mline
+  
+\item   Suppose the following is true: For $s > 0$, if $y$ is a vector with non-negative entries and $\left( I - \frac{k}{2h^2}B \right) x = y$ then $x$ has non-negative entries. \\
+
+  
+      \noindent For $s > 0$, establish the following:
+       \begin{itemize}
+       \item $\begin{bmatrix} 1 & 1 & \cdots & 1 \end{bmatrix} B = 0$ and therefore $\sum_j U_j^n = \sum_j U_j^0$ for all $n$.
+         \item  Show that \eqref{be} is Lax-Richtmeyer stable in the $1$-norm, $\|u\|_1 = h \sum_{i-1}^m |u_i|$.
+    \end{itemize}
+     
+
+  
+\mline 
+  
+\item A challenge (extra credit):  For $s > 0$, establish:
+  \begin{itemize}
+  \item If $y$ is a vector with non-negative entries and $\left( I - \frac{k}{2h^2}B \right) x = y$ then $x$ has non-negative entries.
+  \end{itemize}
+  Note that this shows that if $\sum_j U_j^0 =1$ then at each step $n$ we can interpret $U_j^n$ as the evolution of a probability distribution.
+  
+  \end{enumerate}
+
+  \mline
+\begin{lstlisting}
+## Julia
+function prand(m)
+  p = x -> -(2.0/3)*x.+4.0/3 .+ .5sin.(2*pi*x)
+  B = 1.7
+  out = fill(0.,m)
+  for j = 1:m
+    u = 10.
+    y = 0.
+    while u >= p(y)/B
+      y = rand()
+      u = rand()
+    end
+    out[j] = y
+  end
+  out     
+end
+  \end{lstlisting}
+    \begin{lstlisting}
+ %% Matlab
+ function out = prand(m) 
+    p = @(x) -(2/3)*x + 4/3 + .5*sin(2*pi*x);
+    B = 1.7;
+    out = zeros(m,1);
+    for j = 1:m
+        u = 10.;
+        y = 0.;
+        while u >= p(y)/B
+            y = rand();
+            u = rand();
+        end
+        out(j) = y;
+    end     
+end
+  \end{lstlisting}
+  \begin{lstlisting}
+## Python
+import numpy as np
+    
+def psamp(m):
+  p = lambda x: -(2.0/3)*x +4.0/3 + 0.5*np.sin(2*np.pi*x)
+  B = 1.7
+  out = np.zeros(m)
+  for j in np.arange(m):
+    u = 10.
+    y = 0.
+    while u >= p(y)/B:
+      y = np.random.rand()
+      u = np.random.rand()
+    out[j] = y
+  return out
+\end{lstlisting}
+
+  
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
