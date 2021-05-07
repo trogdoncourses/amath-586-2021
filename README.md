@@ -39,6 +39,7 @@ Lastly, homeworks will be submitted via gradescope: https://www.gradescope.com/c
 15. `Lecture 15, LTE for methods for the heat equation` [video](https://washington.zoom.us/rec/share/1RNgVZk3the2BzBTKXzsTnraBBlP-ESvvPl1XtMp38Nv0tiMuy_S3qJfRwFIFLD8.KAgKQKfevGLNUy9l) [notes](https://drive.google.com/file/d/1ppphDS4l0K2RDE943SYTR5p0nDiVaeqx/view?usp=sharing)
 16. `Lecture 16, stability for methods for the heat equation` [video](https://washington.zoom.us/rec/share/z5tEJu7WuZSjIIX-S3EoXIEuW8V0IeIrgwL1by5qw9VBOoNrQiy8t7F0CQhZD1ny.7Zg5iyxEPUGCU57a) [notes](https://drive.google.com/file/d/162PA_aGbKxZLX7nkYUv0F279x9JmmPej/view?usp=sharing)
 17. `Lecture 17, Lax-Richtmyer stability and Crank-Nicholson demo` [video](https://washington.zoom.us/rec/share/L737iWvTe4ILEwZOuigavZg-gYI1wNAgHKX2IIeYwgDEiRL3mwR9hY9dpYUUqz_a.TIpYNaj6kk8rDIlh) [notes](https://drive.google.com/file/d/1pzsZsdqOaY7FBRmQWJqwDikCE3chH4Do/view?usp=sharing) [ipynb](https://nbviewer.jupyter.org/github/trogdoncourses/amath-586-2021/blob/main/notebooks/CrankNicholson.ipynb) [html](https://faculty.washington.edu/trogdon/amath-586-2021/notebooks/CrankNicholson.html)
+18. `Lecture 18, von Neumann stability analysis` [video](https://washington.zoom.us/rec/share/6hN2UoMeRPi6EGXlJhy9_uNS1MjY51pqbCpfM07DQ9V7ENTd5hgptla3woJJXquw.QVj9lWLMPxe802HY) [notes](https://drive.google.com/file/d/1h9Zavp7JLZL8eFFdsHMAqeY4d2lz7JKP/view?usp=sharing)
 
 ## Special Topics (login with UW netid)
 
