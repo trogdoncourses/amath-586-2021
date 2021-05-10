@@ -41,7 +41,7 @@ u(x,0) = \eta(x),
 \end{align*}
 where $s \neq -1$.   Recall that the MOL discretization with the standard second-order stencil can be written as
 \begin{align*}
-U'(t) = \frac{1}{2h^2} A U(t) + \begin{bmatrix} \frac{U_0(t)}{2h^2} \\ \vdots \\ \frac{U_{m+1}(t)}{2h^2} \end{bmatrix}, \quad A = \begin{bmatrix}
+U'(t) = \frac{1}{2h^2} A U(t) + \begin{bmatrix} \frac{U_0(t)}{2h^2} \\ 0 \\ \vdots \\ 0 \\ \frac{U_{m+1}(t)}{2h^2} \end{bmatrix}, \quad A = \begin{bmatrix}
 -2  & 1\\
 1 & -2 & 1 \\
 & 1 & -2 & 1\\
