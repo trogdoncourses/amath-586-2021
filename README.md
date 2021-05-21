@@ -44,6 +44,7 @@ Lastly, homeworks will be submitted via gradescope: https://www.gradescope.com/c
 20. `Lecture 20, the advection equation` [video](https://uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=6009164f-ead9-45fc-bb79-ad260132063a) [notes](https://drive.google.com/open?id=14Kae8YpJGfhmQcBFO8FR80G9CswXUPjN)
 21. `Lecture 21, more methods for the advection equation` [video](https://washington.zoom.us/rec/share/gcwhvZGlvykR17hNRXvQXOFK8W0lVULuzDh4HhNbOQ72AHG-6ZMWz598jGnL_KSW.y4QwrDbuH8VYdsnX) [notes](https://drive.google.com/file/d/1v6vI-GctQLniOaznEUDLDTz6lrvSHG4k/view?usp=sharing)
 22. `Lecture 22, yet more methods for the advection equation` [video](https://washington.zoom.us/rec/share/LL5Xo0Qd8g1fbsw4_sq3QqRpEzS8RqxLs4YLPD4mPXZK-EYYWWCS65O2n_rpdhiO.hM3_xUOQKgveMZds) [notes](https://drive.google.com/file/d/179p57t-w84Y1ai4HJ-iPv2F61h3gsmbF/view?usp=sharing) [ipynb](https://nbviewer.jupyter.org/github/trogdoncourses/amath-586-2021/blob/main/notebooks/Advection.ipynb) [html](https://faculty.washington.edu/trogdon/amath-586-2021/notebooks/Advection.html) 
+23. `Lecture 23, more on stability for advection problems` [video](https://washington.zoom.us/rec/share/71FZqFxUrEuoPsZJGym2ifZqdcq1S858LivFQHZM-URRoby9yu7xlv-eAKjNH32-.1EG__x3xoYI5cYAr) [notes](https://drive.google.com/file/d/1WsidE3VwHLsFV8JbmZq6tye-4MHo5kAn/view?usp=sharing)
 
 ## Special Topics (login with UW netid)
 
