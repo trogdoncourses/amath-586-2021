@@ -1,0 +1,128 @@
+\documentclass[10pt]{amsart}
+\usepackage[margin=1.5in]{geometry}
+\usepackage{amssymb,amsmath,enumitem}
+\usepackage{listings}
+\lstset{basicstyle=\ttfamily}
+
+\DeclareMathOperator{\D}{d}
+\DeclareMathOperator{\E}{e}
+\newcommand{\half}{\frac{1}{2}}
+\newcommand\unp{U^{n+1}}
+\newcommand\unm{U^{n-1}}
+\newcommand{\bigo}{{\mathrm O}}
+\newcommand{\reals}{\mathbb R}
+
+
+
+\begin{document}
+
+%\topmargin -1.0in
+%\textheight 10.5in
+\pagestyle{empty}
+
+\newcommand{\mline}{\vspace{.2in}\hrule\vspace{.2in}}
+
+
+\title{\bf { AMATH 586 Spring 2021 \\ Homework 5 ---
+Due June 4 by 11pm} }
+\maketitle
+\centerline{Be sure to do a {\tt git pull} to update your local version of the {\tt amath-586-2021} repository.}
+
+\mline
+\begin{enumerate}[label={\bf Problem~{\arabic*}:}]
+\item  Consider the implicit upwind method for the advection equation $u_t + a u_x = 0$
+  \begin{align*}
+    U_{j}^{n+1} = U_{j}^n  - \frac{ak}{h} \left( U_j^{n+1} - U_{j-1}^{n+1} \right).
+  \end{align*}
+  Derive the modified equation for this method to order $O(k + h)$.  Compare the effective diffusion coefficient with that of the modified equation for
+  \begin{align*}
+    U_{j}^{n+1} = U_{j}^n  - \frac{ak}{h} \left( U_j^{n} - U_{j-1}^{n} \right),
+  \end{align*}
+  which was derived in lecture.
+
+  \mline
+\item Consider the method of lines discretization of the advection equation with a Dirichlet boundary conditions:
+  $$ \begin{cases} u_t + a u_{x} = 0, \quad a > 0,\\
+u(x,0) = \eta(x),\\
+u(0,t) = g_0(t), \end{cases} $$
+given by
+\begin{align*}
+  U'(t) &= A U(t) + g(t),\\
+  A &= \frac{-a}{2h} \begin{bmatrix} 0 & 1 \\
+    -1 & 0 & 1 \\
+    & -1 & \ddots & \ddots \\
+    && \ddots && 1\\
+    &&& -1 & 0 \\
+    &&1 & -4 & 3
+  \end{bmatrix}, \quad g(t) = \begin{bmatrix} \frac{ak}{2h} g_0(t) \\ 0 \\ \vdots \\ 0 \end{bmatrix}.
+\end{align*}
+We have seen that if this is discretized using the leapfrog method then an instability is excited.  One may want to stabilize this in the way we stabilized forward Euler to obtain the Lax-Friedrichs method.  So, consider
+\begin{align*}
+  U_j^{n+1} = \frac 1 2 ( U_{j-1}^{n-1} + U_{j+1}^{n-1}) - \frac{ak}{2k} ( U_{j+1}^n - U_{j-1}^n).
+\end{align*}
+Perform the von Neumann stability analysis to find $g(\xi)$ and give numerical evidence (or a proof, if you can) that $|g(\xi)| > 1$ for some $\xi$ regardless of $k,h$.  From this, one might conclude that $k \approx c h^2$ is required for stability.  Now, derive the modified equation and assess whether or not this restriction on $k$ is acceptable.
+
+\mline
+\item Consider the non-constant coefficient reaction diffusion equation
+  \begin{align*}
+    \begin{cases}
+      u_t = \kappa(x) u_{xx} + u(1-u)(u-1/2), \quad \kappa(x) = \sin(2\pi x - \pi)^4,\\
+      u(x,0) = \eta(x),\\
+      u(0,t) = u(1,t),\\
+      u_x(0,t) = u_x(1,t).
+    \end{cases}
+  \end{align*}
+  Use the initial condition
+  \begin{align*}
+    \eta(x) = \frac{ ( 1 + \mathrm{tanh}(20(x-0.25)) ) ( 1 + \mathrm{tanh}(20(-x+0.75)))}{4}.
+  \end{align*}
+  Solve this problem by forming the diffusion matrix
+  \begin{align*}
+    A_{\kappa} = \frac{1}{h^2} \mathrm{diag}(\kappa(x_1),\ldots,\kappa(x_m)) A, \quad A  = \begin{bmatrix}
+-2  & 1 &&& 1\\
+1 & -2 & 1 \\
+& 1 & -2 & 1\\
+&& \ddots & \ddots & \ddots \\
+1&&& 1 & -2 \end{bmatrix}.
+  \end{align*}
+  Write a function {\tt CN(U,k)} that performs a step of size $k$ for trapezoid applied to the MOL discretization $U'(t) = A_{\kappa} U(t)$.  Next use RK2 (5.30) to write a function {\tt RK2(U,k)} performs one time step of $U'(t) = U(t)(1-U(t))(U(t) - 1/2)$ with time step $k$.  Note that while we are solving a PDE, the MOL discretization of a term without derivatives is a system of uncoupled ODEs.  The Strang splitting scheme for this problem is then written as:
+\begin{verbatim}
+  U = RK2(U,k/2)
+  U = CN(U,k)
+  U = RK2(U,k/2)
+\end{verbatim}
+Use this scheme to plot the solution at $t = 0.01,0.10,1.00$.  Repeat with $\kappa(x) = \cos(2\pi x)^4$.
+
+
+
+\mline
+
+\item Prove that for two $n \times n$ matrices $A$, $B$ that
+  \begin{align*}
+    e^{k(A+B)} - e^{k/2 A}e^{k B}e^{k/2 A} = O(k^3).
+  \end{align*}
+
+  \mline
+
+  \item Consider the Jacobi iteration (4.4) for the linear system $A u=f$ arising from a centered difference approximation of the boundary value problem $u_{x x}(x)=f(x)$. Show that this iteration can be interpreted as forward Euler time stepping applied to the MOL equations arising from a centered difference discretization of the heat equation $u_{t}(x, t)=u_{x x}(x, t)-f(x)$ with time step $k=\frac{1}{2} h^{2}$.\\
+  
+Note that if the boundary conditions are held constant then the solution to this heat equation decays to the steady state solution that solves the boundary value problem. Marching to steady state with an explicit method is one way to solve the boundary value problem, though as we saw in Chapter 4 this is a very inefficient way to compute the steady state.
+  
+  \mline
+
+  \item From the previous problem, we see that the Jacobi iteration for solving the boundary value problem $u_{x x}(x)=f(x)$ can be viewed as an explicit time-stepping method for the heat equation $u_{t}(x, t)=u_{x x}(x, t)-f(x)$ with a time step $k=h^{2} / 2$. Now consider the Gauss-Seidel method for solving the linear system,
+$$
+U_{j}^{n+1}=\frac{1}{2}\left(U_{j-1}^{n+1}+U_{j+1}^{n}-h^{2} f\left(x_{j}\right)\right)
+$$
+This can be viewed as a time stepping method for some PDE. Compute the modified equation for this finite difference method and determine what PDE it is consistent with if we let $k=h^{2} / 2$ again. Comment on how this relates to the observation in Section 4.2.1 that Gauss-Seidel takes roughly half as many iterations as Jacobi to converge.
+  
+  
+\end{enumerate}
+
+  
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
