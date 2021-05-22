@@ -71,9 +71,7 @@ function check_condition(λ)
         end
     end
     return 1
-end
-
-function 
+end 
 
 function compute_roots(α,β,z)
     r = length(α)-1
