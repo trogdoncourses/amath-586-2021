@@ -48,6 +48,7 @@ Lastly, homeworks will be submitted via gradescope: https://www.gradescope.com/c
 23. `Lecture 23, more on stability for advection problems` [video](https://washington.zoom.us/rec/share/71FZqFxUrEuoPsZJGym2ifZqdcq1S858LivFQHZM-URRoby9yu7xlv-eAKjNH32-.1EG__x3xoYI5cYAr) [notes](https://drive.google.com/file/d/1WsidE3VwHLsFV8JbmZq6tye-4MHo5kAn/view?usp=sharing)
 24. `Lecture 24, modified equations and a cautionary tale for the advection equation` [video](https://washington.zoom.us/rec/share/6qu5TjDeG6wD1bc1JkK0p4pWfhOGY4BHZFpu_0s4WPKOVwfk7vCZAm7GWyTpjMze.XyTHon-XPizwFSG_) [notes](https://drive.google.com/file/d/1IphkP6EwkrQEeXMo2ULCNDrBaUooff0i/view?usp=sharing) [ipynb](https://nbviewer.jupyter.org/github/trogdoncourses/amath-586-2021/blob/main/notebooks/Advection-Caution.ipynb)
 25. `Lecture 25, Beyond scalar advection and diffusion --- splitting methods` [video](https://washington.zoom.us/rec/share/F7Tk4Qs8V0qDdOqbR0w2l9PqjOLANP3gk230XzT_hwwZNSQgQV-N0jzeBCxYTKsJ.4zBytQd_6RxzJ5B7) [notes](https://drive.google.com/file/d/1HDhPlq7zwbHKDofDaJR12nPSFdJj0H_N/view?usp=sharing)
+26. `Lecture 26, heat equation with no-flux boundary conditions` [video](https://applications.zoom.us/lti/rich/home/recording/detail) [notes](https://drive.google.com/file/d/1JYXoo9dIUg29YsRpiDPkcNQVUFGRIpmT/view?usp=sharing) [ipynb](https://nbviewer.jupyter.org/github/trogdoncourses/amath-586-2021/blob/main/notebooks/TRBDF2-noflux-2D.ipynb)
 
 ## Special Topics (login with UW netid)
 
