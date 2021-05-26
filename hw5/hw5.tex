@@ -58,7 +58,7 @@ given by
 \end{align*}
 We have seen that if this is discretized using the leapfrog method then an instability is excited.  One may want to stabilize this in the way we stabilized forward Euler to obtain the Lax-Friedrichs method.  So, consider
 \begin{align*}
-  U_j^{n+1} = \frac 1 2 ( U_{j-1}^{n-1} + U_{j+1}^{n-1}) - \frac{ak}{2k} ( U_{j+1}^n - U_{j-1}^n).
+  U_j^{n+1} = \frac 1 2 ( U_{j-1}^{n-1} + U_{j+1}^{n-1}) - \frac{ak}{h} ( U_{j+1}^n - U_{j-1}^n).
 \end{align*}
 Perform the von Neumann stability analysis to find $g(\xi)$ and give numerical evidence (or a proof, if you can) that $|g(\xi)| > 1$ for some $\xi$ regardless of $k,h$.  From this, one might conclude that $k \approx c h^2$ is required for stability.  Now, derive the modified equation and assess whether or not this restriction on $k$ is acceptable.
 
