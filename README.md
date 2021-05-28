@@ -50,8 +50,8 @@ Lastly, homeworks will be submitted via gradescope: https://www.gradescope.com/c
 25. `Lecture 25, Beyond scalar advection and diffusion --- splitting methods` [video](https://washington.zoom.us/rec/share/F7Tk4Qs8V0qDdOqbR0w2l9PqjOLANP3gk230XzT_hwwZNSQgQV-N0jzeBCxYTKsJ.4zBytQd_6RxzJ5B7) [notes](https://drive.google.com/file/d/1HDhPlq7zwbHKDofDaJR12nPSFdJj0H_N/view?usp=sharing)
 26. `Lecture 26, heat equation with no-flux boundary conditions` [video](https://washington.zoom.us/rec/play/7befQfr9Oi2eQU1I4SRU0sN7tXwiYwQbZaZXYOLZ5OD5caFGszjRiAy8SjG21Kpl7YX1W5Rep-bLlCMs.wwB2UqGPGZy69ikw) [notes](https://drive.google.com/file/d/1JYXoo9dIUg29YsRpiDPkcNQVUFGRIpmT/view?usp=sharing) [ipynb](https://nbviewer.jupyter.org/github/trogdoncourses/amath-586-2021/blob/main/notebooks/TRBDF2-noflux-2D.ipynb)
 27. `Lecture 27, wave tank` [video](https://washington.zoom.us/rec/share/CDSlgE2uDexxEp4BgmF-BL53n_aXOXv1apNYtdnpJcEDIx7ScoBSAHo9l3Utll4U.DisH1is_Q6fCpOr8) [notes](https://drive.google.com/file/d/1ljR0kEFPtNpUHzkrM01p5eJ2c4N-D0gw/view?usp=sharing) [ipynb](https://nbviewer.jupyter.org/github/trogdoncourses/amath-586-2021/blob/main/notebooks/WaveTank.ipynb)
-28. `Lecture 28, intro to Fourier methods` [video]() [notes](https://drive.google.com/file/d/1pM4mzkNpsITrOdJmr99lT4SPFWcp2nZb/view?usp=sharing)
-29. `Lecture 29, exponential integration` [video](https://washington.zoom.us/rec/share/CDSlgE2uDexxEp4BgmF-BL53n_aXOXv1apNYtdnpJcEDIx7ScoBSAHo9l3Utll4U.DisH1is_Q6fCpOr8) [ipynb](https://nbviewer.jupyter.org/github/trogdoncourses/amath-586-2021/blob/main/notebooks/ExponentialIntegration.ipynb)
+28. `Lecture 28, intro to Fourier methods` [video](https://uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=98acdb01-f70a-42fc-9e8a-ad36017136e1) [notes](https://drive.google.com/file/d/1pM4mzkNpsITrOdJmr99lT4SPFWcp2nZb/view?usp=sharing)
+29. `Lecture 29, exponential integration` [video](https://uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=49a620c9-62e6-4731-88db-ad36017136a8) [ipynb](https://nbviewer.jupyter.org/github/trogdoncourses/amath-586-2021/blob/main/notebooks/ExponentialIntegration.ipynb)
 
 ## Special Topics (login with UW netid)
 
