@@ -49,6 +49,9 @@ Lastly, homeworks will be submitted via gradescope: https://www.gradescope.com/c
 24. `Lecture 24, modified equations and a cautionary tale for the advection equation` [video](https://washington.zoom.us/rec/share/6qu5TjDeG6wD1bc1JkK0p4pWfhOGY4BHZFpu_0s4WPKOVwfk7vCZAm7GWyTpjMze.XyTHon-XPizwFSG_) [notes](https://drive.google.com/file/d/1IphkP6EwkrQEeXMo2ULCNDrBaUooff0i/view?usp=sharing) [ipynb](https://nbviewer.jupyter.org/github/trogdoncourses/amath-586-2021/blob/main/notebooks/Advection-Caution.ipynb)
 25. `Lecture 25, Beyond scalar advection and diffusion --- splitting methods` [video](https://washington.zoom.us/rec/share/F7Tk4Qs8V0qDdOqbR0w2l9PqjOLANP3gk230XzT_hwwZNSQgQV-N0jzeBCxYTKsJ.4zBytQd_6RxzJ5B7) [notes](https://drive.google.com/file/d/1HDhPlq7zwbHKDofDaJR12nPSFdJj0H_N/view?usp=sharing)
 26. `Lecture 26, heat equation with no-flux boundary conditions` [video](https://washington.zoom.us/rec/play/7befQfr9Oi2eQU1I4SRU0sN7tXwiYwQbZaZXYOLZ5OD5caFGszjRiAy8SjG21Kpl7YX1W5Rep-bLlCMs.wwB2UqGPGZy69ikw) [notes](https://drive.google.com/file/d/1JYXoo9dIUg29YsRpiDPkcNQVUFGRIpmT/view?usp=sharing) [ipynb](https://nbviewer.jupyter.org/github/trogdoncourses/amath-586-2021/blob/main/notebooks/TRBDF2-noflux-2D.ipynb)
+27. `Lecture 27, wave tank` [video]() [notes](https://drive.google.com/file/d/1ljR0kEFPtNpUHzkrM01p5eJ2c4N-D0gw/view?usp=sharing) [ipynb](https://nbviewer.jupyter.org/github/trogdoncourses/amath-586-2021/blob/main/notebooks/WaveTank.ipynb)
+28. `Lecture 28, intro to Fourier methods` [video]() [notes](https://drive.google.com/file/d/1pM4mzkNpsITrOdJmr99lT4SPFWcp2nZb/view?usp=sharing)
+29. `Lecture 29, exponential integration` [video]() [ipynb](https://nbviewer.jupyter.org/github/trogdoncourses/amath-586-2021/blob/main/notebooks/ExponentialIntegration.ipynb)
 
 ## Special Topics (login with UW netid)
 
