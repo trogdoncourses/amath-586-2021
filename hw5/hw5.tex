@@ -66,7 +66,7 @@ Perform the von Neumann stability analysis to find $g(\xi)$ and give numerical e
 \item Consider the non-constant coefficient reaction diffusion equation
   \begin{align*}
     \begin{cases}
-      u_t = \kappa(x) u_{xx} + u(1-u)(u-1/2), \quad \kappa(x) = \sin(2\pi x - \pi)^4,\\
+      u_t = \kappa(x) u_{xx} + u(1-u)(u-1/2), \quad \kappa(x) = \sin^4(2\pi x - \pi),\\
       u(x,0) = \eta(x),\\
       u(0,t) = u(1,t),\\
       u_x(0,t) = u_x(1,t).
@@ -91,7 +91,7 @@ Perform the von Neumann stability analysis to find $g(\xi)$ and give numerical e
   U = CN(U,k)
   U = RK2(U,k/2)
 \end{verbatim}
-Use this scheme to plot the solution at $t = 0.01,0.10,1.00$.  Repeat with $\kappa(x) = \cos(2\pi x)^4$.
+Use this scheme to plot the solution at $t = 0.01,0.10,1.00$.  Repeat with $\kappa(x) = \cos^4(2\pi x)$.
 
 
 
