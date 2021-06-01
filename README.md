@@ -20,6 +20,8 @@ Lastly, homeworks will be submitted via gradescope: https://www.gradescope.com/c
 4. [Homework 4](https://classroom.github.com/a/0VaUIbo-)
 5. [Homework 5](https://classroom.github.com/a/V7npT_hH)
 
+1. [Final Project](https://classroom.github.com/a/adVyDyJV)
+
 ## Lectures (login with UW netid)
 
 1. `Lecture 01, IVPs` [video](https://uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=4fb33a31-745f-4899-9086-acf8000a08fd) [notes](https://drive.google.com/file/d/14Ho6iEnkWzIEtOnlZQVvjbMuwVVuqP2Y/view?usp=sharing)
